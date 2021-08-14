@@ -1,0 +1,6 @@
+first swtich to branch July31
+You will find a folder named here as july31-Code assessment AND CREATE NEW BRANCH OF YOUR NAME
+
+inside that folder please create folder of your own name with your code and output folder in it
+create pull request in which base branch will be as JULY31 and compare branch will be your branch
+DONT COMMIT PUSH OR PULL CODE IN MASTER BRANCH
