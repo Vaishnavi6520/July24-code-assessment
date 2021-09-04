@@ -1,0 +1,53 @@
+  
+{% extends 'header.html' %}
+{% block myContent  %}
+
+
+<style>
+    body{
+        
+        background:radial-gradient(#00d9ff,#3f4bf4); 
+         height: 100vh;
+         font-family: serif; 
+         text-shadow: 0 0 0.5px #1900ff, 0 0 0.5px #8c00ff;
+        
+    }
+    
+    .table{
+   text-shadow: 2px 2px 8px #00d9ff;
+   font-family: serif;
+   font-family: sans-serif;
+}
+
+</style>
+
+ <table class="table">
+     <tr>
+            <td> Id </td>
+            <td>  {{ data.id }}  </td>
+        </tr>
+        
+        <tr>
+            <td>faculty code </td>
+            <td>{{ data.faculty_code }}</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{ data.name }}</td>
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td>{{ data.department }}</td>
+        </tr>
+        <tr>
+            <td>address</td>
+            <td>{{ data.address }}</td>
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            <td>{{ data.mobilenumber }}</td>
+        </tr>
+        
+    </table>
+
+{% endblock   %}
