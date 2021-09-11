@@ -1,0 +1,86 @@
+{% extends 'header.html' %}
+
+{% block myContent %}
+
+<!-- <style>
+    body{
+        background-image: linear-gradient(blue,green);
+        height: 100vh;
+      }
+    </style> -->
+
+
+
+    <div class="container">
+        <div class="row">
+                <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+                <div class="col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <h1 style="color: darkgrey; font-size: large; font-style: initial;" >UPDATE</h1>
+ 
+
+
+{% if data %}    
+<form action="http://127.0.0.1:8000/donors/updateapi/" method="post">
+   <table class="table table-borderless">
+       {% for i in data %}
+       
+       <tr>
+        <td> </td>
+        <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+    </tr>
+
+    <tr>
+        <td>Bloodgroup</td>
+        
+        <td>
+            <select class="form-control" name="" id="">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+    
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td><input type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>ADDRESS</td>
+        <td><input type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>MOBILE NUMBER</td>
+        <td><input type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>USERNAME</td>
+        <td><input type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>PASSWORD</td>
+        <td><input type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button class="btn btn-primary">UPDATE</button></td>
+    </tr>
+</form>
+
+   {% endfor %}
+</table> 
+   {% endif %}
+
+
+</div>
+<div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+</div>
+</div>
+
+
+{% endblock %}
